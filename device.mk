@@ -28,7 +28,7 @@ PRODUCT_PACKAGES += \
     camera.spyder \
     lights.spyder \
     hwcomposer.spyder
-
+    
 # Modem
 PRODUCT_PACKAGES += \
     nc \

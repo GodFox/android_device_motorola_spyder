@@ -7,6 +7,12 @@ $(call inherit-product, vendor/mm/config/common_full_phone.mk)
 # Inherit some common CDMA stuff.
 $(call inherit-product, vendor/mm/config/cdma.mk)
 
+
+#MagicLauncher
+PRODUCT_PACKAGES += \
+    MagicLauncher
+
+
 #
 # Setup device specific product configuration.
 #
@@ -34,5 +40,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
    PRIVATE_BUILD_DESC="${PRODUCT_DEVICE_PREFIX}_${PRODUCT_DEVICE}-user ${PLATFORM_VERSION} ${BUILD_ID} ${DATE} release-keys" \
    PRODUCT_BRAND=${PRODUCT_BRAND} \
    BUILD_UTC_DATE= \
-   PRODUCT_DEFAULT_LANGUAGE=en \
-   PRODUCT_DEFAULT_REGION=US \
+   PRODUCT_DEFAULT_LANGUAGE=zh \
+   PRODUCT_DEFAULT_REGION=CN \

@@ -4,11 +4,11 @@
 # rild.libpath=/system/lib/libril-moto-umts-1.so
 rild.libpath=/system/lib/libmoto_ril.so
 rild.libargs=-d /dev/ttyO0
-telephony.lteOnCdmaDevice=1
+telephony.lteOnCdmaDevice=0
 ro.mot.ril.danlist=611,*611,#611
 persist.ril.ecclist=911,*911,#911
 
-persist.ril.modem.mode =1
+persist.ril.modem.mode =2
 
 # USB modes allowed for UI and switching
 ro.ngp_available=1
@@ -16,11 +16,11 @@ ro.modem_available=0
 
 # Default network type.
 # 7 => GLOBAL.
-ro.telephony.default_network=10
+ro.telephony.default_network=3
 ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html
 ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html
-ro.cdma.home.operator.numeric=310004
-ro.cdma.home.operator.alpha=Verizon
+ro.cdma.home.operator.numeric=46003
+ro.cdma.home.operator.alpha=ChinaTelecom
 ro.config.svdo=true
 
 # our HTML browser (not WAP browser ) based on requirements IKHSS6-1061 need to specify UAProf URL
@@ -31,7 +31,7 @@ ro.mot.hw.HAC=1
 # ERI feature
 # 0 OFF
 # 1 ON
-ro.mot.eri=1
+ro.mot.eri=0
 
 # Motorol,a6889c,02/Feb/2010,IKSHADOW-619
 # Proximity Sensor feature
@@ -65,7 +65,7 @@ ro.mot.phonemode.vzwglobalphone=0
 
 # BEGIN Motorola, nfjb73 23-jun-2010, IKMAIN-624
 # this is for feature 33860, when phone is activated, the cdma mdn is written.
-persist.radio.vzw.cdma.mdn=
+persist.radio.vzw.cdma.mdn= deleted
 # END Motorola, nfjb73
 
 # BEGIN Motorola, qmfd78, 14-Jul-2010, IKMAIN-884
@@ -73,7 +73,7 @@ persist.radio.vzw.cdma.mdn=
 # This is part of the VZW World-phone Feature. SMS are always sent to a US SMSC and then injected
 # into that network. This allows for billing and give the user the impression that the device is
 # still in the US.
-ro.telephony.gsm-routes-us-smsc = 1
+ro.telephony.gsm-routes-us-smsc = 0
 # END  Motorola, qmfd78, 14-Jul-2010, IKMAIN-884
 
 # BEGIN Motorola, a22600 qmfd78, 16-Jul-2010, IKDROIDPRO-423
@@ -87,10 +87,10 @@ ro.cdma.home.operator.isnan=1
 ro.mot.dpmext = true
 # EDM feature - IKDROIDPRO-381 -End
 
-# BEGIN Moto, IKSTABLETWO-689, nfjb73, for 34387,33857
+# BEGIN Moto, IKSTAB WO-689, nfjb73, for 34387,33857
 # when phone in Global mode, FW need to know the last phone mode beore power off
 # when phone power up, it would use the right mode to avoid switch
-persist.radio.ap.phonetype=2
+persist.radio.ap.phonetype=1
 # END IKSTABLETWO-689
 
 # BEGIN Motorola, hwqc67, 22-Jun-2011, IKLOCSEN-317, FID 36426
@@ -140,11 +140,11 @@ persist.ril.mux.ttydevice=/dev/ttyO0
 persist.ril.modem.ttydevice=/dev/usb/tty2-1:1.4
 persist.ril.tcmd.ttydevice=/dev/usb/tty2-1:1.3
 persist.ril.diag.ttydevice=/dev/usb/tty2-1:1.0
-persist.ril.features=0x90A
+persist.ril.features=0x102
 persist.ril.mux.sleep=2
 persist.ril.rssi.enable.param6=1
 ril.wrigley.modem.tty=/dev/usb/tty1-2:1.10
-persist.radio.lte.mm.disable=0
+persist.radio.lte.mm.disable=1
 rild.libpath=/system/lib/moto-ril-multimode.so
 gsm.sim.mot.simswap=1
 ro.com.google.gmsversion=4.1_r3
@@ -155,9 +155,9 @@ ro.horizontalVMM=false
 ro.horizontalMOD=false
 ro.horizontalVOD=false
 ro.horizontalEmail=false
-ro.mot.phonemode.vzw4gphone=1
+ro.mot.phonemode.vzw4gphone=0
 ro.com.android.dataroaming=true
-ro.cdma.subscription=0
+ro.cdma.subscription=1
 lte_ril.libpath=/system/lib/lib-mot-lte-ril.so
 cdma_ril.libpath=/system/lib/libmoto_ril.so
 ril.rat=LTE
@@ -169,7 +169,7 @@ ro.gsm.2nd_data_retry_config=max_retries=infinite,default_randomization=2000,0,0
 ro.mot.setuptype=2
 ro.horizontalIM=true
 ro.ril.svlte1x=true
-ro.mot.lte_on_cdma=1
+ro.mot.lte_on_cdma=0
 ro.mot.tmp.telephony.refactor=true
 ro.mot.dpmext=true
 ro.com.google.clientid=android-motorola
@@ -179,7 +179,7 @@ ro.mot.hidden_keyboards=evfwd
 
 # Additions
 ril.subscription.types=NV,RUIM
-ro.telephony.ril.v3=writeaidonly,usevoicetechfordata
+ro.telephony.ril.v3=writeaidonly,signalstrength
 
 # Vold switchability uncomment second line to swap
 ro.vold.switchablepair=/storage/sdcard0,/storage/sdcard1
