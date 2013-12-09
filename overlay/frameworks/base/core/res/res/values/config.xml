@@ -23,6 +23,12 @@
 
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface">rmnet0</string>
+    
+    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+
+         autodetected from the Configuration. -->
+
+    <bool name="config_showNavigationBar">true</bool>
 
     <!-- List of file paths for USB host busses to exclude from USB host support.
          For example, if the first USB bus on the device is used to communicate
